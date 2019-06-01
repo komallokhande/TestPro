@@ -4,9 +4,8 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 
-port=3000
+port=3000;
 
-// the stdin 'data' event triggers after a user types in a line
 process.stdin.on('data', (userInput) => {
     userInput = userInput.toString().trim();
     evaluateCmd(userInput);
